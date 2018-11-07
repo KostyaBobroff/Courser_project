@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container hide-on-small-only show-on-medium-and-up">
+    <div class="row ">
+        <form class="col m6 offset-m3 hoverable" style="margin-top:10em;" method="post" action={% url 'settings' %}>
+            {% csrf_token %}
+            <div class="row center-align">
+                <div class="input-field col m10 offset-m1">
+                     {{ form.bedroom_temperature }}
+{#                    <input id="bedroom_temperature" type="number" min="16" max="50" value="21" class="validate">#}
+                    <label for="bedroom_temperature">Температура в спальне</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m10 offset-m1">
+                    {{ form.water_temperature }}
+{#                    <input id="water-temperature" type="number" class="validate" min="24" max="90" value="80">#}
+                    <label for="water-temperature">Температура горячей воды</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m5 offset-m1">
+                    <label>
+                        Свет в спальне
+                        {{ form.light_in_bedroom }}
+{#                        <input type="checkbox" />#}
+                        <span>Вкл.</span>
+                    </label>
+                </div>
+                <div class="input-field col m5 offset-m1">
+                    <div class="row">
+                        <label for="" class="col m12"></label>
+                    </div>
+                    <label>
+                        Свет в ванной
+                        {{ form.light_in_bathroom }}
+{#                        <input type="checkbox" id=""/>#}
+                        <span>Вкл.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 offset-m1">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Установить
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="hide-on-med-and-up show-on-small">
+    <div class="row ">
+        <form class="col s12 " style="margin-top:10em;" method="post" action={% url 'settings' %}>
+            {% csrf_token %}
+            <div class="row center-align">
+                <div class="input-field col s10 offset-s1">
+                    {{ form.bedroom_temperature }}
+{#                    <input id="bedroom_temperature" type="number" min="16" max="50" value="21" class="validate">#}
+                    <label for="bedroom_temperature">Температура в спальне</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    {{ form.water_temperature }}
+{#                    <input id="water-temperature" type="number" class="validate" min="24" max="90" value="80">#}
+                    <label for="water-temperature">Температура горячей воды</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5 offset-s1">
+                    <label>
+                        Свет в спальне
+                        {{ form.light_in_bedroom }}
+{#                        <input type="checkbox" />#}
+                        <span>Вкл.</span>
+                    </label>
+                </div>
+                <div class="input-field col s5 offset-s1">
+                    <div class="row">
+                        <label for="" class="col s12"></label>
+                    </div>
+                    <label>
+                        Свет в ванной
+                        {{ form.light_in_bathroom }}
+{#                        <input type="checkbox" id=""/>#}
+                        <span>Вкл.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s1">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Установить
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

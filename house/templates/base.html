@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href={% static "css/materialize.css" %}  media="screen,projection"/>
+    <style>
+        .mycol{
+            margin-top:1em;
+        }
+        .leftcol-s9{
+            padding-left:2em;
+        }
+        .rightcol-s3{
+            padding-right:2em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="orange darken-4">
+        <div class="nav-wrapper  container">
+            <a href={% url "index" %} class="brand-logo">Smart House</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <li>
+                <a href={% url "user_setting" %}>Kostya Bobrov</a></li>
+            <li><a href={% url "settings" %}>Smart House Settings</a></li>
+            <li><a href="#">About Us</a></li>
+
+            </ul>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="http://materializecss.com/images/office.jpg" alt="Background User View">
+                    </div>
+                    <a href={% url "user_setting" %}><img class="circle" src="http://materializecss.com/images/yuna.jpg" alt="Avatar User View"></a>
+                    <a href={% url "user_setting" %}><span class="white-text name">Kostya Bobrov</span></a>
+                    <a href={% url "user_setting" %}><span class="white-text email">k.bobrov.jr@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href={% url "settings" %}>Smart House Settings</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+<script type="text/javascript" src={% static "js/materialize.js" %}></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var elems = document.querySelectorAll('.sidenav');
+              var instances = M.Sidenav.init(elems,  {inDuration: 350,
+              outDuration: 350,
+              edge: 'left'
+            });
+            });
+
+    </script>
+</html>

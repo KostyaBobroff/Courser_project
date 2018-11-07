@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+          <div class="col s8 m9 mycol" >
+                <div class="row">
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable green lighten-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Кондиционер</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text red" name="air_conditioner" value="True" />
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Лампа в спальне</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="bedroom_light" value="True"/>
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Лампа в ванной</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="bathroom_light" value="True"/>
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Занавески</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="curtains" value="Open"/>
+                                        <span  class="white-text">Открыть</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Бойлер</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="boiler" value="True"/>
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Холодная вода</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="cold_water" value="True"/>
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Горячей вода</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="hot_water" value="True"/>
+                                        <span  class="white-text">Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4  mycol center-align">
+                        <div class="card hoverable blue darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">Стиральная машина</span>
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="white-text" name="washing_machine" value="True"/>
+                                        <span  class="white-text" checked>Включить</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        <div class="col s4 m3 mycol left-align" >
+            <ul>
+                <li>Температура в спальне: <span>30</span>  <i class="tiny material-icons">ac_unit</i> </li>
+                <li>Задымление: <span>квартира задымлена</span>  <i class="tiny material-icons">smoking_rooms</i> </li>
+                <li>Присутствие: <span>есть человек</span>  <i class="tiny material-icons">peoples</i> </li>
+                <li>Температура горячей воды бойлере: <span>50</span>  <i class="tiny material-icons">opacity</i> </li>
+                <li>Стиральная машина: <span>не сломана</span>  <i class="tiny material-icons">new_releases</i> </li>
+                <li>Протечка воды: <span>нет протечек</span>  <i class="tiny material-icons">opacity</i> </li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}

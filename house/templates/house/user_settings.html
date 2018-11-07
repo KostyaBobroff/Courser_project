@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container hide-on-small-only show-on-medium-and-up">
+    <div class="row">
+    <h3 class="col m6 offset-m3"> Change User Settings</h3>
+        <form class="col m6 offset-m3" style="margin-top:5em;">
+            <div class="row">
+                <div class="input-field col m10 offset-m1">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix"> New first name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m10 offset-m1">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">New email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m10 offset-m1">
+                    <i class="material-icons prefix">lock_outline</i>
+                    <input id="pass" type="password" class="validate">
+                    <label for="pass">New password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m10 offset-m1">
+                    <i class="material-icons prefix">power</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">New Api Key</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 offset-m1">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Установить
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="hide-on-med-and-up show-on-small">
+     <div class="row">
+        <h3 class="col s12"> Change User Settings</h2>
+        <form class="col s12 " style="margin-top:5em;">
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="pass" type="text" class="validate">
+                    <label for="pass">New first name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">New email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <i class="material-icons prefix">lock_outline</i>
+                    <input id="icon_prefix" type="password" class="validate">
+                    <label for="icon_prefix">New password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <i class="material-icons prefix">power</i>
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">New Api Key</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6 offset-s1">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Установить
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
