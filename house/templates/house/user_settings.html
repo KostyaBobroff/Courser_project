@@ -4,32 +4,37 @@
 <div class="container hide-on-small-only show-on-medium-and-up">
     <div class="row">
     <h3 class="col m6 offset-m3"> Change User Settings</h3>
-        <form class="col m6 offset-m3" style="margin-top:5em;">
+        <form class="col m6 offset-m3" style="margin-top:5em;" action="{% url 'user_setting' %}" method="post">
+            {% csrf_token %}
             <div class="row">
                 <div class="input-field col m10 offset-m1">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix"> New first name</label>
+                    {{ form.username }}
+{#                    <input id="icon_prefix" type="text" class="validate">#}
+                    <label for="icon_prefix"> New Login</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col m10 offset-m1">
                     <i class="material-icons prefix">email</i>
-                    <input id="email" type="email" class="validate">
+                    {{ form.email }}
+{#                    <input id="email" type="email" class="validate">#}
                     <label for="email">New email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col m10 offset-m1">
                     <i class="material-icons prefix">lock_outline</i>
-                    <input id="pass" type="password" class="validate">
+                    {{ form.password }}
+{#                    <input id="pass" type="password" class="validate">#}
                     <label for="pass">New password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col m10 offset-m1">
                     <i class="material-icons prefix">power</i>
-                    <input id="icon_prefix" type="text" class="validate">
+                    {{ form.api_key }}
+{#                    <input id="icon_prefix" type="text" class="validate">#}
                     <label for="icon_prefix">New Api Key</label>
                 </div>
             </div>

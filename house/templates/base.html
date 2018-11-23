@@ -7,6 +7,7 @@
     <title>Title</title>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href={% static "css/materialize.css" %}  media="screen,projection"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <style>
         .mycol{
             margin-top:1em;
@@ -25,10 +26,12 @@
             <a href={% url "index" %} class="brand-logo">Smart House</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-            <li>
-                <a href={% url "user_setting" %}>Kostya Bobrov</a></li>
-            <li><a href={% url "settings" %}>Smart House Settings</a></li>
-            <li><a href="#">About Us</a></li>
+                <li><a href={% url "user_setting" %}>{{ user.get_username }}</a></li>
+{#            <li><a href={% url "user_setting" %}>Kostya Bobrov</a></li>#}
+            <li><a href={% url "settings" %}>Settings</a></li>
+
+            <li><a href={% url 'logout' %}>Log Out</a></li>
+
 
             </ul>
         </div>
@@ -57,8 +60,14 @@
               var instances = M.Sidenav.init(elems,  {inDuration: 350,
               outDuration: 350,
               edge: 'left'
+
             });
+              $("a.brand-logo").click(function (event) {
+                  alert( "Thanks for visiting!" );
+                  event.preventDefault();
+              });
             });
+
 
     </script>
 </html>

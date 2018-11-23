@@ -12,6 +12,7 @@ class HouseSetting(models.Model):
     light_in_bathroom = models.BooleanField(default=True)
     light_in_bedroom = models.BooleanField(default=True)
     objects = SettingManager()
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 

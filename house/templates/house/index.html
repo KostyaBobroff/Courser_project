@@ -10,7 +10,7 @@
                                 <span class="card-title">Кондиционер</span>
                                 <form action="#">
                                     <label>
-                                        <input type="checkbox" class="white-text red" name="air_conditioner" value="True" />
+                                        <input type="checkbox" class="white-text red" name="air_conditioner" value="True" {% if data.air_conditioner %}checked{% endif %} />
                                         <span  class="white-text">Включить</span>
                                     </label>
                                 </form>
@@ -110,14 +110,14 @@
                     </div>
                 </div>
           </div>
-        <div class="col s4 m3 mycol left-align" >
+        <div class="col s4 m3 mycol left-align">
             <ul>
-                <li>Температура в спальне: <span>30</span>  <i class="tiny material-icons">ac_unit</i> </li>
-                <li>Задымление: <span>квартира задымлена</span>  <i class="tiny material-icons">smoking_rooms</i> </li>
-                <li>Присутствие: <span>есть человек</span>  <i class="tiny material-icons">peoples</i> </li>
-                <li>Температура горячей воды бойлере: <span>50</span>  <i class="tiny material-icons">opacity</i> </li>
-                <li>Стиральная машина: <span>не сломана</span>  <i class="tiny material-icons">new_releases</i> </li>
-                <li>Протечка воды: <span>нет протечек</span>  <i class="tiny material-icons">opacity</i> </li>
+                <li><span style="float:right;padding-right:1.5rem;" >{{ data.bedroom_temperature }}<i class="tiny material-icons">ac_unit</i></span>Температура в спальне:</li>
+                <li><span style="float:right;padding-right:1.5rem;">{{ data.boiler_temperature }}<i class="tiny material-icons">opacity</i></span>Температура горячей воды бойлере:</li>
+                <li><span style="float:right;padding-right:1.5rem;">{% if data.smoke_detector  %} да{% else %}  нет{% endif%}<i class="tiny material-icons">smoking_rooms</i></span>Задымление:</li>
+{#                <li><span style="float:right;padding-right:1.5rem;">{% if data.bedroom  %} да{% else %}  нет{% endif%}<i class="tiny material-icons">peoples</i></span>Присутствие:</li>#}
+                <li><span style="float:right;padding-right:1.5rem;">{% if data.washing_machine == "on" %} включена {% elif data.washing_machine == "off"%} выключена {% else %} сломана {% endif%}<i class="tiny material-icons">new_releases</i></span>Стиральная машина:</li>
+                <li><span style="float:right;padding-right:1.5rem;">{% if data.leak_detector %}протечка{% else %}нет протечки{% endif%}<i class="tiny material-icons">opacity</i></span>Протечка воды:</li>
             </ul>
         </div>
 
